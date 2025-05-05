@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Productos</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./script.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main class="main">
+        <section class="section hero">
+            <img class="hero-background" src="./images/blue-wave.svg" alt="Background blue wave">
+            <div class="section-content">
+                <div class="left-content">
+                    <h1 class="hero-title">Comienza tu negocio</h1>
+                    <p class="hero-text">Crea tarjetas de productos para tu negocio y prepara una lista para vender.</p>
+                    <a href="#" class="hero-btn">Comenzar</a>
+                </div>
+                <div class="right-content">
+                    <img class="hero-image" src="./images/hero-image.svg" alt="Hero image">
+                </div>
+            </div>
+        </section>
+        <section class="section card-section">
+            <div id="panel" class="create-panel">
+                <i id="close" class="close fa-solid fa-xmark"></i>
+                <h4 class="panel-title">Crear producto</h4>
+                <form class="panel-form">
+                    <label for="nombre">Nombre del producto</label>
+                    <input type="text" id="nombre" placeholder="Ingresa el nombre del producto" required>
+                    <label for="precio">Precio del producto en dólares</label>
+                    <input type="number" id="precio" placeholder="Ingresa el precio del producto en dólares" required>
+                    <label for="desc">Descripción del producto</label>
+                    <textarea id="desc" placeholder="Ingresa una descripción de tu producto" rows="5" required></textarea>
+                    <button id="crearProducto" class="form-btn" type="submit">Crear producto</button>
+                </form>
+            </div>
+            <div class="section-header">
+                <h3 class="section-title">Agrega tus productos</h3>
+                <p class="section-text">Haz click sobre la carta gris y agrega productos a tu lista.</p>
+            </div>
+            <div id="cardsContainer" class="section-content cards-container">
+                <div id="excard" class="excard">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>
