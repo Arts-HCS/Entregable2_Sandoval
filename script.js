@@ -39,17 +39,19 @@ crearProducto.onclick = () => {
     let precioProducto = document.getElementById('precio');
     let descProducto = document.getElementById('desc');
 
-    products.push({
-        nombreProducto: nombreProducto.value,
-        precioProducto: precioProducto.value,
-        descProducto: descProducto.value 
-    })
-    localStorage.setItem("Productos", JSON.stringify(products));
-    panel.classList.remove('mostrar-panel');
-
-    setTimeout(() => {
-        location.reload();
-    }, 100);
+    if (nombreProducto.value && precioProducto && descProducto){
+        products.push({
+            nombreProducto: nombreProducto.value,
+            precioProducto: precioProducto.value,
+            descProducto: descProducto.value 
+        })
+        localStorage.setItem("Productos", JSON.stringify(products));
+        panel.classList.remove('mostrar-panel');
+    
+        setTimeout(() => {
+            location.reload();
+        }, 100);
+    }     
     
 }
 
