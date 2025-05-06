@@ -223,6 +223,8 @@ body {
 .section-content.cards-container{
     padding: 3rem;
     gap: 50px;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 .excard{
@@ -236,6 +238,26 @@ body {
     box-shadow: 5px 7px rgba(0,0,0,0.5);
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    position: relative;
+}
+
+.borrarProductos{
+    position: absolute;
+    top: -40px;
+    left: 60px;
+    width: fit-content;
+    border-radius: 20px;
+    font-size: 17px;
+    padding: 15px 25px;
+    color: #eee;
+    background-color: #111;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.borrarProductos:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(0,0,0,0.2);
 }
 
 .excard:hover{
@@ -259,8 +281,9 @@ body {
     align-items: flex-start;
     padding: 2rem;
     color: #111;
+    overflow: scroll;
+    position: relative;
 }
-
 .card .card-title{
     font-size: 22px;
     margin-bottom: 15px;
@@ -274,5 +297,6 @@ body {
 .card .card-desc{
     font-size: 15px;
     line-height: 1.2;
-    text-align: left;
+    text-align: justify;
+    width: 100%;
 }
